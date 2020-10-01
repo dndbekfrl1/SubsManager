@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/subsListFragment">
+
+    <fragment
+        android:id="@+id/subsAlarmListFragment"
+        android:name="com.example.subsmanager.SubsAlarmListFragment"
+        android:label="fragment_subs_alarm_list"
+        tools:layout="@layout/fragment_subs_alarm_list" />
+    <fragment
+        android:id="@+id/subsDetailFragment"
+        android:name="com.example.subsmanager.SubsDetailFragment"
+        android:label="fragment_subs_detail"
+        tools:layout="@layout/fragment_subs_detail" />
+    <fragment
+        android:id="@+id/subsListFragment"
+        android:name="com.example.subsmanager.SubsListFragment"
+        android:label="fragment_subs_list"
+        tools:layout="@layout/fragment_subs_list" >
+        <action
+            android:id="@+id/action_subsListFragment_to_subsDetailFragment"
+            app:destination="@id/subsDetailFragment"
+            app:popUpTo="@id/subsListFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_subsListFragment_to_subsCreateFragment"
+            app:destination="@id/subsCreateFragment"
+            app:popUpTo="@id/subsListFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_subsListFragment_to_subsAlarmListFragment"
+            app:destination="@id/subsAlarmListFragment"
+            app:popUpTo="@id/subsListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/subsCreateFragment"
+        android:name="com.example.subsmanager.SubsCreateFragment"
+        android:label="fragment_subs_create"
+        tools:layout="@layout/fragment_subs_create" >
+        <action
+            android:id="@+id/action_subsCreateFragment_to_subsCreateDetailFragment"
+            app:destination="@id/subsCreateDetailFragment"
+            app:popUpTo="@id/subsCreateFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/subsCreateDetailFragment"
+        android:name="com.example.subsmanager.SubsCreateDetailFragment"
+        android:label="fragment_subs_create_detail"
+        tools:layout="@layout/fragment_subs_create_detail" />
+    <fragment
+        android:id="@+id/boardListFragment"
+        android:name="com.example.subsmanager.BoardListFragment"
+        android:label="fragment_board_list"
+        tools:layout="@layout/fragment_board_list" >
+        <action
+            android:id="@+id/action_boardListFragment_to_boardCreateFragment"
+            app:destination="@id/boardCreateFragment"
+            app:popUpTo="@id/boardListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/mypageFragment"
+        android:name="com.example.subsmanager.MypageFragment"
+        android:label="fragment_mypage"
+        tools:layout="@layout/fragment_mypage" />
+    <fragment
+        android:id="@+id/subsRecommendFragment"
+        android:name="com.example.subsmanager.SubsRecommendFragment"
+        android:label="fragment_subs_recommend"
+        tools:layout="@layout/fragment_subs_recommend" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.subsmanager.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_joinFragment"
+            app:destination="@id/joinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinFragment"
+        android:name="com.example.subsmanager.JoinFragment"
+        android:label="fragment_join"
+        tools:layout="@layout/fragment_join" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.subsmanager.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_subsListFragment"
+        app:destination="@id/subsListFragment"
+        app:popUpTo="@id/subsListFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/boardCreateFragment"
+        android:name="com.example.subsmanager.BoardCreateFragment"
+        android:label="fragment_board_create"
+        tools:layout="@layout/fragment_board_create" />
+</navigation>

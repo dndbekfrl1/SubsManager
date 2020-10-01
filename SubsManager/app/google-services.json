@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "296626926586",
+    "firebase_url": "https://subsmanager-c41ea.firebaseio.com",
+    "project_id": "subsmanager-c41ea",
+    "storage_bucket": "subsmanager-c41ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296626926586:android:70b1a6b1bd3b4b60236a43",
+        "android_client_info": {
+          "package_name": "com.example.subsmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296626926586-hn9r5m8hakq3b7kelpo0rhkg9vhmqgp2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN2qszLYdTRjZbdaZcQVw8nJWGqupM1eY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296626926586-hn9r5m8hakq3b7kelpo0rhkg9vhmqgp2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

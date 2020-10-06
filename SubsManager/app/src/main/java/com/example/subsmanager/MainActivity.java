@@ -39,16 +39,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Fragment fragment = fragmentManager.findFragmentByTag(tag);
+
         if (fragment == null) {
-            if (id == R.id.subs_list) {
-                fragment = new SubsListFragment();
-            } else if (id == R.id.board_list){
-                fragment = new BoardListFragment();
-            } else if(id==R.id.subs_recommend) {
-                fragment = new SubsRecommendFragment();
-            }
-            else{
-                fragment = new MypageFragment();
+            switch (id){
+                case R.id.subs_list:
+                    fragment = new SubsListFragment();
+                    break;
+                case R.id.board_list:
+                    fragment = new BoardListFragment();
+                    break;
+                case R.id.subs_recommend:
+                    fragment = new SubsRecommendFragment();
+                    break;
+                case R.id.mypage:
+                    fragment = new MypageFragment();
+                    break;
             }
             fragmentTransaction.add(R.id.content_layout, fragment, tag);
         } else {
@@ -60,3 +65,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commitNow();
     }
 }
+
+
+
